@@ -1,4 +1,6 @@
 <?php
+require_once("./config.php");
+
 $con = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 if(!$con) {
     echo '<script>alert("出错啦！错误码：0x2333333");window.history.back(-1);</script>';
