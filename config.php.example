@@ -1,0 +1,10 @@
+<?php
+//数据库配置
+$dbhost = 'localhost';
+$dbuser = 'username';
+$dbpass = 'password';
+$dbname = 'NEUSing';
+
+//大一入学年份（用来根据学号判断年级）
+$Grade1 = '2017';
+?>
