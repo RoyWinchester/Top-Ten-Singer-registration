@@ -16,7 +16,7 @@
 <div class="container">
     <div class="row">
     <div class="card col s12 m8 offset-m2">
-    <form class="card-content" action="check.php" method="post">
+    <form class="card-content" action="check.php" method="post" enctype="multipart/form-data">
         <span class="card-title">报名信息</span>
         <div class="row">
             <div class="input-field col s10 offset-s1">
@@ -52,7 +52,7 @@
         <div class="row">
             <div class="input-field col s10 offset-s1">
                 <input id="class" type="text" class="validate" name="class">
-                <label for="class">专业</label>
+                <label for="class">班级</label>
             </div>
         </div>
         <div class="row">
@@ -63,11 +63,11 @@
         </div>
         <div class="row">
             <div class="input-field col s10 offset-s1">
-            <input id="qq" type="text" class="validate">
+            <input id="qq" type="text" class="validate" name="qq">
             <label for="qq">QQ号</label>
         </div>
             <div class="input-field col s10 offset-s1">
-            <input id="tel" type="text" class="validate">
+            <input id="tel" type="text" class="validate" name="phone">
             <label for="tel">手机号</label>
         </div>
             <div class="input-field col s10 offset-s1">
@@ -79,7 +79,7 @@
             <div class="file-field input-field col s10 offset-s1">
                 <div class="btn"  style="background-color: #ce93d8">
                     <i class="material-icons">perm_media</i>
-                    <input type="file">
+                    <input type="file" name="photo" accept="image/jpg,image/jpeg,image/png">
                 </div>
                 <div class="file-path-wrapper">
                     <input placeholder="你的靓照" class="file-path validate" type="text">
@@ -87,9 +87,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col s4 offset-s8">
-                <button class="waves-effect waves-light btn" type="submit" style="background-color: #ce93d8">提交</button>
-            </div>
+                <button class="waves-effect waves-light btn" type="submit" style="background-color: #ce93d8;float:right">提交</button>
         </div>
     </form>
     </div>
