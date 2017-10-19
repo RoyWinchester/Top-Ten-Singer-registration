@@ -1,0 +1,11 @@
+{
+    "name": "top-ten-singer",
+    "version": "1.0.0",
+    "description": "",
+    "devDependencies": {
+        "gulp": "latest",
+        "gulp-clean-css": "^3.9.0",
+        "gulp-uglify": "latest",
+        "pump": "^1.0.2"
+    }
+}
