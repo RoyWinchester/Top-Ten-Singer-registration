@@ -9,7 +9,7 @@
         <br/>
         <br/>
         <div>
-            <form action="check.php" method="post">
+            <form action="check.php" method="post" enctype="multipart/form-data">
                 姓名：<input type="text" name="name">
                 <br/>
                 <br/>
@@ -29,7 +29,7 @@
                 班级：<input type="text" name="class">
                 <br/>
                 <br/>
-                联系电话：<input type="text" name="phone">
+                电话：<input type="text" name="phone">
                 <br/>
                 <br/>
                 QQ号：<input type="text" name="qq">
@@ -39,6 +39,9 @@
                 <br/>
                 <br/>
                 歌曲名称：<textarea name="song"></textarea>
+                <br/>
+                <br/>
+                个人照片：<input type="file" name="photo" accept="image/jpg,image/jpeg,image/png">
                 <br/>
                 <br/>
                 <input type="submit" value="立即报名">
