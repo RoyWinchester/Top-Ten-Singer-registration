@@ -9,17 +9,20 @@ function test_input($data){
 	return $data;
 }
 
-if(!(isset($_POST["name"])&&isset($_POST["studentid"])&&isset($_POST["major"])&&isset($_POST["class"])&&isset($_POST["phone"])&&isset($_POST["info"]))) {
+if(!(isset($_POST["name"])&&isset($_POST["studentid"])&&isset($_POST["college"])&&isset($_POST["major"])&&isset($_POST["class"])&&isset($_POST["phone"])&&isset($_POST["qq"])&&isset($_POST["wechat"])&&isset($_POST["song"]))) {
     echo '<meta http-equiv="refresh" content="0;url=./index.html">';
     exit();
 }
 
 $Name = test_input($_POST["name"]);
 $Studentid = test_input($_POST["studentid"]);
+$College = test_input($_POST["college"]);
 $Major = test_input($_POST["major"]);
 $Class = test_input($_POST["class"]);
 $Phone = test_input($_POST["phone"]);
-$Info = test_input($_POST["info"]);
+$QQ = test_input($_POST["qq"]);
+$Wechat = test_input($_POST["wechat"]);
+$Song = test_input($_POST["song"]);
 $IP = $_SERVER['REMOTE_ADDR'];
 date_default_timezone_set("Asia/Shanghai");
 $Time = date("Y-m-d H:i:s");
@@ -41,6 +44,9 @@ if($Err == "") {
         $Err = "请选择正确的性别";
 }
 
+if($Err == ""&&empty($College))
+    $Err = "请输入学院";
+
 if($Err == ""&&empty($Major))
     $Err = "请输入专业";
 
@@ -52,8 +58,16 @@ if($Err == ""&&empty($Phone))
 else if($Err == ""&&!ctype_digit($Phone))
     $Err = "请输入正确的联系电话";
 
-if($Err == ""&&empty($Info))
-    $Err = "请输入自我介绍";
+if($Err == ""&&empty($QQ))
+    $Err = "请输入QQ号";
+else if($Err == ""&&!ctype_digit($QQ))
+    $Err = "请输入正确的QQ号";
+
+if($Err == ""&&empty($Wechat))
+    $Err = "请输入微信";
+
+if($Err == ""&&empty($Song))
+    $Err = "请输入歌曲名称";
 
 if($Err != "") {
     echo '<script>alert("'.$Err.'");window.history.back(-1);</script>';
@@ -72,7 +86,7 @@ if(mysqli_fetch_array($StudentidResult)[0]) {
     exit();
 }
 
-$res = mysqli_query($con, "insert into singer (name, studentid, gender, major, class, phone, info, ip, time) values ('$Name', '$Studentid', '$Gender', '$Major', '$Class', '$Phone', '$Info', '$IP', '$Time')");
+$res = mysqli_query($con, "insert into singer (name, studentid, gender, college, major, class, phone, qq, wechat, song, ip, time) values ('$Name', '$Studentid', '$Gender', '$College', '$Major', '$Class', '$Phone', '$QQ', '$Wechat', '$Song', '$IP', '$Time')");
 
 if($res) {
     echo '<script>alert("恭喜您已成功报名");window.location.href="./index.html";</script>';
