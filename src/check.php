@@ -69,6 +69,15 @@ if($Err == ""&&empty($Wechat))
 if($Err == ""&&empty($Song))
     $Err = "请输入歌曲名称";
 
+if($Err == ""&&$_FILES["photo"]["error"] != 4) {
+    if($_FILES["photo"]["type"] != "image/jpg"&&$_FILES["photo"]["type"] != "image/jpeg"&&$_FILES["photo"]["type"] != "image/png")
+        $Err = "请选择正确的照片";
+    else if($_FILES["photo"]["size"] > 8000000)
+        $Err = "文件过大";
+    else if($_FILES["photo"]["error"] != 0)
+        $Err = "文件上传失败";
+}
+
 if($Err != "") {
     echo '<script>alert("'.$Err.'");window.history.back(-1);</script>';
     exit();
@@ -85,6 +94,9 @@ if(mysqli_fetch_array($StudentidResult)[0]) {
     mysqli_close($con);
     exit();
 }
+
+if($_FILES["photo"]["error"] == 0)
+    move_uploaded_file($_FILES["photo"]["tmp_name"], './photos/'.$Studentid);
 
 $res = mysqli_query($con, "insert into singer (name, studentid, gender, college, major, class, phone, qq, wechat, song, ip, time) values ('$Name', '$Studentid', '$Gender', '$College', '$Major', '$Class', '$Phone', '$QQ', '$Wechat', '$Song', '$IP', '$Time')");
 

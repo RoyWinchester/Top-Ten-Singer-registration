@@ -1,1 +1,4 @@
 src/config.php
+src/csv/singer.csv
+src/photos/*
+!src/photos/index.html
