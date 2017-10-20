@@ -10,8 +10,12 @@ gulp.task("move", function () {
         pipe(gulp.dest("./dist/html"));
     
     // img
-    gulp.src("./src/img/*.png").
+    gulp.src("./src/img/*").
         pipe(gulp.dest("./dist/img"));
+
+    // php
+    gulp.src("./src/*.php").
+        pipe(gulp.dest("./dist"));
 });
 
 gulp.task('minCss', function (cb) {
