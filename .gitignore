@@ -2,3 +2,5 @@ src/config.php
 src/csv/singer.csv
 src/photos/*
 !src/photos/index.html
+node_modules/
+package-lock.json
