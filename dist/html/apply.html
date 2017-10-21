@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-    <link type="text/css" rel="stylesheet" href="css/main.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../css/main.css"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>十佳歌手报名表</title>
     <style>
         body{
             background-image: url(img/poster.jpg);
@@ -18,16 +18,16 @@
     </style>
 </head>
 <body>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/materialize.min.js"></script>
 <div class="container">
     <div class="row">
     <div class="card col s12 m8 offset-m2">
-    <form class="card-content" action="check.php" method="post" enctype="multipart/form-data">
+    <form class="card-content" action="../check.php" method="post" enctype="multipart/form-data">
         <span class="card-title">报名信息</span>
         <div class="row">
             <div class="input-field col s10 offset-s1">
-                <input id="first_name" type="text" class="validate" name="name">
+                <input id="first_name" type="text" class="validate" name="name" required>
                 <label for="first_name">姓名</label>
             </div>
             <div class="col s10 offset-s1">
@@ -40,45 +40,45 @@
                 </p>
             </div>
             <div class="input-field col s10 offset-s1">
-                <input id="number" type="text" class="validate" name="studentid">
+                <input id="number" type="text" class="validate" name="studentid" required>
                 <label for="number">学号</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s10 offset-s1">
-                <input id="fd" type="text" class="validate"  name="college">
+                <input id="fd" type="text" class="validate"  name="college" required>
                 <label for="fd">学院</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s10 offset-s1">
-                <input id="zy" type="text" class="validate" name="major">
+                <input id="zy" type="text" class="validate" name="major" required>
                 <label for="zy">专业</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s10 offset-s1">
-                <input id="class" type="text" class="validate" name="class">
+                <input id="class" type="text" class="validate" name="class" required>
                 <label for="class">班级</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s10 offset-s1">
-                <input id="song" type="text" class="validate" name="song">
+                <input id="song" type="text" class="validate" name="song" required>
                 <label for="song">歌曲名称</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s10 offset-s1">
-            <input id="qq" type="text" class="validate" name="qq">
+            <input id="qq" type="text" class="validate" name="qq" required>
             <label for="qq">QQ号</label>
         </div>
             <div class="input-field col s10 offset-s1">
-            <input id="tel" type="text" class="validate" name="phone">
+            <input id="tel" type="text" class="validate" name="phone" required>
             <label for="tel">手机号</label>
         </div>
             <div class="input-field col s10 offset-s1">
-                <input id="wechat" type="text" class="validate" name="wechat">
+                <input id="wechat" type="text" class="validate" name="wechat" required>
                 <label for="wechat">微信</label>
             </div>
         </div>
