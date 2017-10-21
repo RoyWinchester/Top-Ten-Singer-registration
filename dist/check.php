@@ -69,11 +69,10 @@ if($Err == ""&&empty($Wechat))
 if($Err == ""&&empty($Song))
     $Err = "请输入歌曲名称";
 
-echo '<script>alert("'.var_dump($_FILES["photo"]).'");</script>';
 if($Err == ""&&$_FILES["photo"]["error"] != 4) {
     if($_FILES["photo"]["type"] != NULL&&$_FILES["photo"]["type"] != "image/jpg"&&$_FILES["photo"]["type"] != "image/jpeg"&&$_FILES["photo"]["type"] != "image/png")
         $Err = "请选择正确的照片";
-    else if($_FILES["photo"]["error"] == 1$_FILES["photo"]["size"] > 8000000)
+    else if($_FILES["photo"]["error"] == 1&&$_FILES["photo"]["size"] > 8000000)
         $Err = "文件过大";
     else if($_FILES["photo"]["error"] != 0)
         $Err = "文件上传失败";
