@@ -1,6 +1,5 @@
-src/config.php
-src/csv/singer.csv
-src/photos/*
-!src/photos/index.html
+dist/config.php
+dist/singer.csv
+photos
 node_modules/
 package-lock.json
