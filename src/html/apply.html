@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../css/main.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <title>十佳歌手报名表</title>
+    <style>
+    </style>
+</head>
+<body>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/materialize.min.js"></script>
+<div class="container">
+    <div class="row">
+    <div class="card col s12 m8 offset-m2">
+    <form class="card-content" action="../check.php" method="post" enctype="multipart/form-data">
+        <span class="card-title">报名信息</span>
+        <div class="row">
+            <div class="input-field col s10 offset-s1">
+                <input id="first_name" type="text" class="validate" name="name" required>
+                <label for="first_name">姓名</label>
+            </div>
+            <div class="col s10 offset-s1">
+                <span style="color: #9e9e9e">性别：</span>
+                <p>
+                    <input type="radio" name="gender" value="男" id="male">
+                    <label for="male">男</label>
+                    <input type="radio" name="gender" value="女" id="female">
+                    <label for="female">女</label>
+                </p>
+            </div>
+            <div class="input-field col s10 offset-s1">
+                <input id="number" type="text" class="validate" name="studentid" required>
+                <label for="number">学号</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s10 offset-s1">
+                <input id="fd" type="text" class="validate"  name="college" required>
+                <label for="fd">学院</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s10 offset-s1">
+                <input id="zy" type="text" class="validate" name="major" required>
+                <label for="zy">专业</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s10 offset-s1">
+                <input id="class" type="text" class="validate" name="class" required>
+                <label for="class">班级</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s10 offset-s1">
+                <input id="song" type="text" class="validate" name="song" required>
+                <label for="song">歌曲名称</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s10 offset-s1">
+            <input id="qq" type="text" class="validate" name="qq" required>
+            <label for="qq">QQ号</label>
+        </div>
+            <div class="input-field col s10 offset-s1">
+            <input id="tel" type="text" class="validate" name="phone" required>
+            <label for="tel">手机号</label>
+        </div>
+            <div class="input-field col s10 offset-s1">
+                <input id="wechat" type="text" class="validate" name="wechat" required>
+                <label for="wechat">微信</label>
+            </div>
+        </div>
+        <div class="row" >
+            <div class="file-field input-field col s10 offset-s1">
+                <div class="btn"  style="background-color: #ce93d8">
+                    <i class="material-icons">perm_media</i>
+                    <input type="file" name="photo" accept="image/jpg,image/jpeg,image/png">
+                </div>
+                <div class="file-path-wrapper">
+                    <input placeholder="你的靓照" class="file-path validate" type="text">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+                <button class="waves-effect waves-light btn" type="submit" style="background-color: #ce93d8;float:right">提交</button>
+        </div>
+    </form>
+    </div>
+</div>
+</div>
+</body>
+</html>
