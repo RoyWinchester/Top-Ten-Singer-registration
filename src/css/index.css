@@ -1,0 +1,177 @@
+/* 暂时先这样写吧，以后再去兼容ie8 */
+html {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* 字体自适应 */
+/* 320px到375px之间从12px变到16px */
+@media screen and (min-width: 320px) {
+    /* hack Safari */
+    html {
+        font-size: calc(75% + 2 * (100vw - 320px) / 55);
+        font-size: calc(12px + 2 * (100vw - 320px) / 55);
+    }
+}
+/* 375px到414px之间从16px变到18px */
+@media screen and (min-width: 375px) {
+    /* hack Safari */
+    html {
+        font-size: calc(100% + 2 * (100vw - 375px) / 39);
+        font-size: calc(16px + 2 * (100vw - 375px) / 39);
+    }
+}
+
+/* 414px到1000px从18px变到22px */
+@media screen and (min-width: 414px) {
+    html {
+        font-size: calc(112.5% + 4 * (100vw - 414px) / 586);
+        font-size: calc(18px + 4 * (100vw - 414px) / 586);
+    }
+}
+
+/* 600px到1000px从20px变到24px */
+@media screen and (min-width: 600px) {
+    html {
+        font-size: calc(125% + 4 * (100vw - 600px) / 400);
+        font-size: calc(20px + 2 * (100vw - 600px) / 400);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    html {
+        font-size: calc(137.5% + 5 * (100vw - 1000px) / 1000);
+        font-size: calc(22px + 5 * (100vw - 1000px) / 1000);
+    }
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/poster.jpg");
+    background-size: 100% 100%;
+}
+
+.header {
+    height: 12%;
+    width: 100%;
+    color: #7522a3;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 5px 15px #666;
+}
+
+.nav {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    position: absolute;
+    left: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: normal;
+    vertical-align: middle;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.more-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1em;    
+}
+
+.more {
+    color: #7522a3;
+    transition: color 0.3s linear;    
+}
+
+.more:visited {
+    color: #7522a3;
+}
+
+.more:hover,
+.more:active {
+    color: #fff;
+}
+
+.foo {
+    height: 38%; 
+}
+.main {
+    height: 50%;
+}
+
+.st10-wrapper {
+    margin: 0 auto;
+}
+
+.st10 {
+    filter: opacity(0.7);
+}
+
+.btn-wrapper {
+    margin: 0 auto;
+}
+
+.apply-btn {
+    display: block;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    border: 0.0625rem solid rgba(255, 255, 255, 0.7);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s linear, background-color 0.3s linear;
+}
+
+.apply-btn:link,
+.apply-btn:visited {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.apply-btn:hover {
+    color: #303030;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.slogan {
+    margin-top: 0.5rem;
+    box-sizing: border-box;
+    width: 50%;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 0;
+    float: left;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.lslogan {
+    text-align: right;
+    padding-right: 1rem;
+}
+
+.rslogan {
+    padding-left: 1rem;
+}
+
+.slogan-logo {
+    width: 2rem;
+    height: 2rem;
+    vertical-align: middle;    
+}
+
+.slogan-logo {
+    filter: opacity(0.7);    
+}
+
+.slogan-text {
+    font-size: 1rem;
+    vertical-align: middle;
+}
