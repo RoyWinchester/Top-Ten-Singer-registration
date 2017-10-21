@@ -16,6 +16,10 @@ gulp.task("move", function () {
     // php
     gulp.src("./src/*.php").
         pipe(gulp.dest("./dist"));
+
+    // fonts    
+    gulp.src("./src/fonts/*/*").
+        pipe(gulp.dest("./dist/fonts"));
 });
 
 gulp.task('minCss', function (cb) {
