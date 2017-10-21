@@ -2,15 +2,16 @@
 html {
     height: 100%;
     width: 100%;
+}
+.main{
     font-size: 16px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 /* 字体自适应 */
 /* 320px到375px之间从12px变到16px */
 @media screen and (min-width: 320px) {
     /* hack Safari */
-    html {
+    .main {
         font-size: calc(75% + 2 * (100vw - 320px) / 55);
         font-size: calc(12px + 2 * (100vw - 320px) / 55);
     }
@@ -18,7 +19,7 @@ html {
 /* 375px到414px之间从16px变到18px */
 @media screen and (min-width: 375px) {
     /* hack Safari */
-    html {
+    .main {
         font-size: calc(100% + 2 * (100vw - 375px) / 39);
         font-size: calc(16px + 2 * (100vw - 375px) / 39);
     }
@@ -26,7 +27,7 @@ html {
 
 /* 414px到1000px从18px变到22px */
 @media screen and (min-width: 414px) {
-    html {
+    .main {
         font-size: calc(112.5% + 4 * (100vw - 414px) / 586);
         font-size: calc(18px + 4 * (100vw - 414px) / 586);
     }
@@ -34,14 +35,14 @@ html {
 
 /* 600px到1000px从20px变到24px */
 @media screen and (min-width: 600px) {
-    html {
+    .main {
         font-size: calc(125% + 4 * (100vw - 600px) / 400);
         font-size: calc(20px + 2 * (100vw - 600px) / 400);
     }
 }
 
 @media screen and (min-width: 1000px) {
-    html {
+    .main {
         font-size: calc(137.5% + 5 * (100vw - 1000px) / 1000);
         font-size: calc(22px + 5 * (100vw - 1000px) / 1000);
     }
@@ -53,6 +54,8 @@ body {
     height: 100%;
     background-image: url("../img/poster.jpg");
     background-size: 100% 100%;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
 }
 
 .header {

@@ -4,3 +4,4 @@ src/photos/*
 !src/photos/index.html
 node_modules/
 package-lock.json
+.idea
