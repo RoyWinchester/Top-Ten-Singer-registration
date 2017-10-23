@@ -8,6 +8,13 @@
     <meta charset="UTF-8">
     <title>十佳歌手报名表</title>
     <style>
+        body{
+            background-image: url(img/poster.jpg);
+            background-size: 100% 100%;
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            opacity: 0.9;
+        }
     </style>
 </head>
 <body>
@@ -30,6 +37,15 @@
                     <label for="male">男</label>
                     <input type="radio" name="gender" value="女" id="female">
                     <label for="female">女</label>
+                </p>
+            </div>
+            <div class="col s10 offset-s1">
+                <span style="color: #9e9e9e">校区：</span>
+                <p>
+                    <input type="radio" name="campus" value="南湖" id="nanhu">
+                    <label for="nanhu">南湖</label>
+                    <input type="radio" name="campus" value="浑南" id="hunnan">
+                    <label for="hunnan">浑南</label>
                 </p>
             </div>
             <div class="input-field col s10 offset-s1">
@@ -58,7 +74,7 @@
         <div class="row">
             <div class="input-field col s10 offset-s1">
                 <input id="song" type="text" class="validate" name="song" required>
-                <label for="song">歌曲名称</label>
+                <label for="song">初赛歌曲</label>
             </div>
         </div>
         <div class="row">
@@ -71,10 +87,15 @@
             <label for="tel">手机号</label>
         </div>
             <div class="input-field col s10 offset-s1">
-                <input id="wechat" type="text" class="validate" name="wechat" required>
-                <label for="wechat">微信</label>
-            </div>
+            <input id="wechat" type="text" class="validate" name="wechat" required>
+            <label for="wechat">微信</label>
         </div>
+            <div class="input-field col s10 offset-s1">
+            <input id="email" type="text" class="validate" name="email" required>
+            <label for="email">邮箱</label>
+        </div>
+        </div>
+        
         <div class="row" >
             <div class="file-field input-field col s10 offset-s1">
                 <div class="btn"  style="background-color: #ce93d8">
@@ -82,7 +103,7 @@
                     <input type="file" name="photo" accept="image/jpg,image/jpeg,image/png">
                 </div>
                 <div class="file-path-wrapper">
-                    <input placeholder="你的靓照" class="file-path validate" type="text">
+                    <input placeholder="你的靓照（请不要超过4MB哦）" class="file-path validate" type="text">
                 </div>
             </div>
         </div>

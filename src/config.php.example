@@ -5,6 +5,9 @@ $dbuser = 'username';
 $dbpass = 'password';
 $dbname = 'NEUSing';
 
+//消息通知群号
+$QunNum = 'XXXXXXXX';
+
 //大一入学年份（用来根据学号判断年级）
 $Grade1 = '2017';
 ?>
